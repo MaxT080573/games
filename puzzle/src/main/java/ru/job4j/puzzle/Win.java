@@ -27,14 +27,12 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean rsl = false;
         for (int row = 0; row < board.length; row++) {
-            if (board[row][row] == 1) {
-                if (monoHorizontal(board, row) || monoVertical(board, row)) {
+            if ((board[row][row] == 1) && (monoHorizontal(board, row) || monoVertical(board, row))) {
                     rsl = true;
                     break;
                 }
             }
-        }
-        return rsl;
+         return rsl;
     }
 }
 
